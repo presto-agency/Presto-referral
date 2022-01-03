@@ -151,6 +151,7 @@ h6 {
   position: relative;
   background-color: #D8DADB;
   padding: 89px 0 0 0;
+  cursor: none;
 }
 
 .block-1 .container {
@@ -255,6 +256,14 @@ h6 {
           writing-mode: vertical-rl;
   color: #1C314E;
   opacity: 0.5;
+}
+
+.block-1__arrow {
+  display: none;
+  position: absolute;
+  cursor: none;
+  width: 80px;
+  height: 80px;
 }
 
 @media (max-width: 1023px) {

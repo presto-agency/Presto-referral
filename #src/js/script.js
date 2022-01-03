@@ -1,32 +1,28 @@
 window.addEventListener('DOMContentLoaded', function () {
-
+    cursorAnimation()
 })
 
-// const bg = () => {
-//     document.querySelectorAll(".ibg").forEach(el => {
-//         if (el.querySelector('img')) {
-//             el.style.backgroundImage = 'url(' + el.querySelector('img').getAttribute('src') + ')';
-//             el.querySelector('img').style.display = 'none';
-//         }
-//     });
-// }
+const cursorAnimation = () => {
+    const cursor = document.querySelector('.block-1__arrow');
+    const block = document.querySelector('.block-1');
+    let links = document.querySelectorAll('a');
 
-// const scrollPage = () => {
-//     let scrollPosition;
-//     const header = document.querySelector('.header');
-//     const scrollChange = 1;
+    block.addEventListener('mouseover', function (e) {
+        cursor.style.display = 'block';
+        block.addEventListener('mousemove', cMove, false);
+        function cMove(e) {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        }
+    }, false);
 
-//     const addClass = () => header.classList.add("hide")
-//     const removeClass = () => header.classList.remove("hide")
-
-//     window.addEventListener('scroll', function () {
-//         scrollPosition = window.scrollY;
-//         if (scrollPosition >= scrollChange) { addClass() }
-//         else { removeClass() }
-//     })
-// }
-
-
+    links.forEach(link => {
+        link.addEventListener('mouseover', function () {
+            cursor.style.width = 100 + 'px';
+            cursor.style.height = 100 + 'px';
+        })
+    });
+}
 
 
 
