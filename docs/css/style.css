@@ -123,6 +123,14 @@ h6 {
   padding: 96px 0 0 0;
 }
 
+body {
+  cursor: none;
+}
+
+body a {
+  cursor: pointer;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -151,7 +159,6 @@ h6 {
   position: relative;
   background-color: #D8DADB;
   padding: 89px 0 0 0;
-  cursor: none;
 }
 
 .block-1 .container {
@@ -261,9 +268,29 @@ h6 {
 .block-1__arrow {
   display: none;
   position: absolute;
+  pointer-events: none;
   cursor: none;
   width: 80px;
   height: 80px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  -o-transition: transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  background-image: url(../img/home/arrow-a.svg);
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.block-1__arrow.active {
+  -webkit-transform: translate(-50%, -50%) scale(1.3);
+      -ms-transform: translate(-50%, -50%) scale(1.3);
+          transform: translate(-50%, -50%) scale(1.3);
+  background: none;
 }
 
 @media (max-width: 1023px) {

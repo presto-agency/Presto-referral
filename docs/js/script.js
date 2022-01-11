@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 const cursorAnimation = () => {
     const cursor = document.querySelector('.block-1__arrow');
-    const block = document.querySelector('.block-1');
+    const block = window;
     let links = document.querySelectorAll('a');
 
     block.addEventListener('mouseover', function (e) {
@@ -18,8 +18,10 @@ const cursorAnimation = () => {
 
     links.forEach(link => {
         link.addEventListener('mouseover', function () {
-            cursor.style.width = 100 + 'px';
-            cursor.style.height = 100 + 'px';
+            cursor.classList.add('active');
+        })
+        link.addEventListener('mouseout', function () {
+            cursor.classList.remove('active');
         })
     });
 }
