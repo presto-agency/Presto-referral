@@ -224,6 +224,7 @@ h6 {
 
 .block-1__list {
   position: absolute;
+  z-index: 2;
   bottom: -143px;
   left: 28px;
   display: -webkit-box;
@@ -257,6 +258,371 @@ h6 {
   opacity: 0.5;
 }
 
+.block-1__arrow {
+  display: none;
+}
+
+.block-2 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.block-2 .description {
+  position: relative;
+  padding: 270px 0 163px 0;
+}
+
+.block-2 .description__top-picture {
+  position: absolute;
+  top: 103px;
+  right: 0;
+  width: 224px;
+  height: 153px;
+}
+
+.block-2 .description__top-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-2 .description__bottom-picture {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 256px;
+  height: 170px;
+}
+
+.block-2 .description__bottom-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-2 .description p {
+  color: #1C314E;
+  font-size: 36px;
+  letter-spacing: 0.01em;
+  word-spacing: -0.09ch;
+  line-height: 54px;
+  max-width: 670px;
+  margin: 0 0 0 410px;
+}
+
+.block-2 .description p a {
+  position: relative;
+  display: inline-block;
+  color: #F4A17C;
+  padding: 0 26px 0 0;
+  margin: 0 9px 0 0;
+}
+
+.block-2 .description p a:before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: url(../img/home/link-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+}
+
+.block-2 .recommend {
+  position: relative;
+  padding: 140px 0 200px 0;
+  margin: 156px 0 232px 0;
+}
+
+.block-2 .recommend__bg {
+  position: absolute;
+  top: -41px;
+  left: -828px;
+  width: 1150px;
+  height: 670px;
+}
+
+.block-2 .recommend__bg svg {
+  fill: #D8DADB;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+}
+
+.block-2 .recommend__team-picture {
+  position: absolute;
+  top: 0;
+  right: 26px;
+  height: 512px;
+  width: 372px;
+}
+
+.block-2 .recommend__team-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-2 .recommend__content {
+  max-width: 500px;
+  margin: 0 0 0 400px;
+}
+
+.block-2 .recommend__content h2 {
+  font-size: 93px;
+  line-height: 120px;
+  color: #1C314E;
+}
+
+.block-2 .recommend__content p {
+  margin: 7px 0 0 0;
+  max-width: 224px;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1C314E;
+}
+
+.block-2 .numbers {
+  position: relative;
+  max-width: 1440px;
+  margin: 232px auto 161px 0;
+  padding: 132px 0 166px 0;
+}
+
+.block-2 .numbers:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1040px;
+  height: 432px;
+  background: #F2EBE8;
+}
+
+.block-2 .numbers__description h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0 624px;
+  font-size: 70px;
+  line-height: 77px;
+  color: #1C314E;
+  max-width: 384px;
+}
+
+.block-2 .numbers__picture {
+  position: absolute;
+  bottom: 0;
+  right: 21px;
+  width: 343px;
+  height: 170px;
+}
+
+.block-2 .numbers__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-3 {
+  position: relative;
+  margin: 166px auto 260px auto;
+  max-width: 1440px;
+}
+
+.block-3:after {
+  content: "";
+  position: absolute;
+  top: -84px;
+  left: 0;
+  width: 96px;
+  height: 416px;
+  background: #D8DADB;
+}
+
+.block-3__content {
+  max-width: 898px;
+  margin: 0 0 0 270px;
+  padding: 0 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block-3 .card__top h4 {
+  font-size: 16px;
+  line-height: 23px;
+  color: #F4A17C;
+  margin: 0 0 14px 0;
+}
+
+.block-3 .card__top p {
+  font-size: 18px;
+  line-height: 16px;
+  color: #1C314E;
+}
+
+.block-3 .card__top p span {
+  color: #828282;
+  margin: 0 0 0 7px;
+}
+
+.block-3 .card__middle {
+  margin: 0 0 10px 0;
+}
+
+.block-3 .card__middle p {
+  font-size: 136px;
+  color: #1C314E;
+}
+
+.block-3 .card__middle p span {
+  font-size: 50px;
+  color: #F4A17C;
+  margin: 0 0 0 11px;
+}
+
+.block-3 .card__bottom p {
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1C314E;
+}
+
+.block-3 .card__bottom p:first-child {
+  padding: 0 0 0 36px;
+}
+
+.block-3 .card__bottom p:first-child:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 22px;
+  background: url(../img/home/reward.svg);
+  background-size: 20px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.block-3 .card__bottom p span {
+  display: block;
+  color: #828282;
+  font-size: 14px;
+  line-height: 120%;
+  margin: 8px 0 0 0;
+}
+
+.block-4 {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 322px 0 0 0;
+}
+
+.block-4:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  height: 679px;
+  background: #F2EBE8;
+}
+
+.block-4__content {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0 512px;
+  max-width: 650px;
+}
+
+.block-4__content h3 {
+  margin: 0 0 54px 0;
+  font-size: 38px;
+  line-height: 50px;
+  color: #1C314E;
+}
+
+.block-4__btn {
+  max-width: 633px;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #1C314E;
+}
+
+.block-4__btn span {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 21px;
+  color: #1C314E;
+}
+
+.block-4__img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 368px;
+  height: 552px;
+}
+
+.block-4__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-4__logo {
+  position: relative;
+  margin: 154px 0 0 0;
+  z-index: 2;
+  width: 1440px;
+  height: 141px;
+}
+
+.block-4__logo svg {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-4__logo svg use {
+  width: 1440px;
+}
+
 @media (min-width: 1024px) {
   body {
     cursor: none;
@@ -267,8 +633,8 @@ h6 {
   }
 
   .block-1__arrow {
-    display: none;
     position: absolute;
+    z-index: 5;
     pointer-events: none;
     cursor: none;
     width: 80px;

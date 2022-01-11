@@ -1,0 +1,88 @@
+.block-3 {
+    position: relative;
+    margin: 166px auto 260px auto;
+    max-width: 1440px;
+    &:after{
+        content: '';
+        position: absolute;
+        top: -84px;
+        left: 0;
+        width: 96px;
+        height: 416px;
+        background: $bg-color;
+    }
+    &__content {
+        max-width: 898px;
+        margin: 0 0 0 270px;
+        padding: 0 20px;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+    
+        &__top {
+            h4{
+                font-size: 16px;
+                line-height: 23px;
+                color: $link-color;
+                margin: 0 0 14px 0;
+            }
+            p{
+                font-size: 18px;
+                line-height: 16px;
+                color: $text-color;
+                span{
+                    color: #828282;
+                    margin: 0 0 0 7px;
+                }
+            }
+        }
+    
+        &__middle {
+            margin: 0 0 10px 0;
+            p{
+                font-size: 136px;
+                color: $text-color;
+                span{
+                    font-size: 50px;
+                    color: $link-color;
+                    margin: 0 0 0 11px;
+                }
+            }
+        }
+    
+        &__bottom {
+            p{
+                position: relative;
+                font-size: 18px;
+                line-height: 18px;
+                color: $text-color;
+                &:first-child{
+                    padding: 0 0 0 36px;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 1px;
+                        left: 1px;
+                        width: 20px;
+                        height: 22px;
+                        background: url(../img/home/reward.svg);
+                        background-size: 20px 22px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+                span{
+                    display: block;
+                    color: #828282;
+                    font-size: 14px;
+                    line-height: 120%;
+                    margin: 8px 0 0 0;
+                }
+            }
+        }
+    }
+
+}

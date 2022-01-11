@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 const cursorAnimation = () => {
-    if (document.documentElement.clientWidth >= 1024) {
+    if (document.documentElement.clientWidth > 1024) {
         const cursor = document.querySelector('.block-1__arrow');
         const block = window;
         let links = document.querySelectorAll('a');

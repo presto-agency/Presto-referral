@@ -60,6 +60,7 @@
 
     &__list {
         position: absolute;
+        z-index: 2;
         bottom: -143px;
         left: 28px;
         display: flex;
@@ -83,11 +84,13 @@
             opacity: 0.5;
         }
     }
-
+    &__arrow{
+        display: none;
+    }
     @media(min-width: 1024px){
         &__arrow{
-            display: none;
             position: absolute;
+            z-index: 5;
             pointer-events: none;
             cursor: none;
             width: 80px;
