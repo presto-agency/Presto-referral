@@ -1,5 +1,6 @@
 .block-1 {
     position: relative;
+    z-index: 3;
     background-color: $bg-color;
     padding: 89px 0 0 0;
     .container{
@@ -59,10 +60,12 @@
     }
 
     &__list {
-        position: absolute;
+        position: fixed;
+        z-index: 3;
+        top: 608px;
+        left: 28px;
         z-index: 2;
         bottom: -143px;
-        left: 28px;
         display: flex;
         flex-direction: column;
     }
@@ -82,6 +85,12 @@
             writing-mode: vertical-rl;
             color: $text-color;
             opacity: 0.5;
+            transition: 300ms;
+        }
+        &:hover{
+            a{
+                opacity: 1;
+            }
         }
     }
     &__arrow{

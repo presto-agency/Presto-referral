@@ -41,6 +41,7 @@
                 margin: 0 0 0 410px;
                 a{
                     position: relative;
+                    line-height: 36px;
                     display: inline-block;
                     color: $link-color;
                     padding: 0 26px 0 0;
@@ -48,7 +49,7 @@
                     &:before{
                         content: '';
                         position: absolute;
-                        top: 23px;
+                        bottom: 5px;
                         right: 0;
                         width: 18px;
                         height: 18px;
@@ -93,6 +94,8 @@
             }
     
             &__content {
+                position: relative;
+                z-index: 2;
                 max-width: 500px;
                 margin: 0 0 0 400px;
                 h2{
@@ -119,7 +122,8 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 1040px;
+            max-width: 1040px;
+            width: 100%;
             height: 432px;
             background: $pink-color;
         }
@@ -148,5 +152,131 @@
                 }
             }
     }
-    
+    @media(max-width: 1439px){
+        .description{
+            padding: 300px 0 221px 0;
+            p{
+                margin: 0 auto;
+            }
+        }
+        .recommend{
+            &__content{
+                margin: 0 auto;
+            }
+        }
+        .numbers{
+            padding: 132px 0 219px 0;
+        }
+    }
+    @media(max-width: 1279px){
+        .recommend{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 500px;
+            margin: 70px auto 0 auto;
+            &__team-picture{
+                position: static;
+                z-index: 2;
+                margin: 30px 0 0 0;
+                width: 100%;
+                height: 100%;
+                max-height: 512px;
+                max-width: 372px;
+                img{
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+            &__content{
+                margin: 0;
+            }
+        }
+        .numbers{
+            margin: 70px 0;
+        }
+    }
+    @media(max-width: 1199px){
+        .numbers{
+            display: flex;
+            justify-content: flex-end;
+            &__description{
+                h3{
+                    margin: 0 50px 0 0;
+                }
+            }
+        }
+    }
+    @media(max-width: 767px){
+        .description{
+            p{
+                font-size: 24px;
+                line-height: 36px;
+                a{
+                    line-height: 24px;
+                    &:before{
+                        width: 14px;
+                        height: 14px;
+                        background-size: 14px 14px;
+                    }
+                }
+            }
+        }
+        .recommend{
+            &__content{
+                h2{
+                    font-size: 68px;
+                    line-height: 74px;
+                }
+            }
+            &__bg{
+                display: none;
+            }
+        }
+        .numbers{
+            &__description{
+                h3{
+                    max-width: 320px;
+                    font-size: 60px;
+                    line-height: 70px;
+                }
+            }
+        }
+    }
+    @media(max-width: 567px){
+        .numbers{
+            &__description{
+                h3{
+                    max-width: 280px;
+                    font-size: 48px;
+                    line-height: 52px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media(max-width: 424px){
+        .recommend{
+            &__content{
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+        .numbers{
+            padding: 132px 0 159px 0;
+            &__picture{
+                width: 250px;
+                height: 130px;
+            }
+            &__description{
+                h3{
+                    font-size: 42px;
+                    line-height: 48px;
+                }
+            }
+        }
+    }
 }

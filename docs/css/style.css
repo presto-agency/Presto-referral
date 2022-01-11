@@ -149,6 +149,7 @@ h6 {
 
 .block-1 {
   position: relative;
+  z-index: 3;
   background-color: #D8DADB;
   padding: 89px 0 0 0;
 }
@@ -223,10 +224,12 @@ h6 {
 }
 
 .block-1__list {
-  position: absolute;
+  position: fixed;
+  z-index: 3;
+  top: 608px;
+  left: 28px;
   z-index: 2;
   bottom: -143px;
-  left: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,6 +259,13 @@ h6 {
           writing-mode: vertical-rl;
   color: #1C314E;
   opacity: 0.5;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.block-1__link:hover a {
+  opacity: 1;
 }
 
 .block-1__arrow {
@@ -317,6 +327,7 @@ h6 {
 
 .block-2 .description p a {
   position: relative;
+  line-height: 36px;
   display: inline-block;
   color: #F4A17C;
   padding: 0 26px 0 0;
@@ -326,7 +337,7 @@ h6 {
 .block-2 .description p a:before {
   content: "";
   position: absolute;
-  top: 23px;
+  bottom: 5px;
   right: 0;
   width: 18px;
   height: 18px;
@@ -375,6 +386,8 @@ h6 {
 }
 
 .block-2 .recommend__content {
+  position: relative;
+  z-index: 2;
   max-width: 500px;
   margin: 0 0 0 400px;
 }
@@ -405,7 +418,8 @@ h6 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 1040px;
+  max-width: 1040px;
+  width: 100%;
   height: 432px;
   background: #F2EBE8;
 }
@@ -661,8 +675,144 @@ h6 {
   }
 }
 
+@media (max-width: 1439px) {
+  .block-2 .description {
+    padding: 300px 0 221px 0;
+  }
+
+  .block-2 .description p {
+    margin: 0 auto;
+  }
+
+  .block-2 .recommend__content {
+    margin: 0 auto;
+  }
+
+  .block-2 .numbers {
+    padding: 132px 0 219px 0;
+  }
+}
+
+@media (max-width: 1279px) {
+  .block-2 .recommend {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 500px;
+    margin: 70px auto 0 auto;
+  }
+
+  .block-2 .recommend__team-picture {
+    position: static;
+    z-index: 2;
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 100%;
+    max-height: 512px;
+    max-width: 372px;
+  }
+
+  .block-2 .recommend__team-picture img {
+    position: relative;
+    z-index: 2;
+  }
+
+  .block-2 .recommend__content {
+    margin: 0;
+  }
+
+  .block-2 .numbers {
+    margin: 70px 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .block-2 .numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .block-2 .numbers__description h3 {
+    margin: 0 50px 0 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .root {
     padding: 39px 0 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .block-2 .description p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .block-2 .description p a {
+    line-height: 24px;
+  }
+
+  .block-2 .description p a:before {
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+  }
+
+  .block-2 .recommend__content h2 {
+    font-size: 68px;
+    line-height: 74px;
+  }
+
+  .block-2 .recommend__bg {
+    display: none;
+  }
+
+  .block-2 .numbers__description h3 {
+    max-width: 320px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 567px) {
+  .block-2 .numbers__description h3 {
+    max-width: 280px;
+    font-size: 48px;
+    line-height: 52px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 424px) {
+  .block-2 .recommend__content h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .block-2 .numbers {
+    padding: 132px 0 159px 0;
+  }
+
+  .block-2 .numbers__picture {
+    width: 250px;
+    height: 130px;
+  }
+
+  .block-2 .numbers__description h3 {
+    font-size: 42px;
+    line-height: 48px;
   }
 }
