@@ -24,3 +24,27 @@
 		}
 	}
 }
+
+.arrow-page{
+	display: none;
+}
+@media(min-width: 1024px){
+	.arrow-page{
+		position: absolute;
+		z-index: 5;
+		pointer-events: none;
+		cursor: none;
+		width: 80px;
+		height: 80px;
+		transform: translate(-50%, -50%);
+		transition: transform 300ms;
+		background-image: url(../img/home/arrow-a.svg);
+		background-size: 20px 20px;
+		background-position: center;
+		background-repeat: no-repeat;
+		&.active{
+			transform: translate(-50%, -50%) scale(1.3);
+			background: none;
+		}
+	}
+}

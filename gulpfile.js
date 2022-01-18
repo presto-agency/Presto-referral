@@ -172,6 +172,11 @@ function pluginFolderCss() {
         .pipe(dest(project_folder + '/plugins/css/'));
 }
 
+function pluginFolderJson() {
+    return src(source_folder + '/plugins/*.json')
+        .pipe(dest(project_folder + '/plugins/json/'));
+}
+
 function pluginFolderJs() {
     return src(source_folder + '/plugins/*.js')
         .pipe(dest(project_folder + '/plugins/js/'));
@@ -188,11 +193,12 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, pluginFolderCss, pluginFolderJs), Sprite);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, pluginFolderCss, pluginFolderJs, pluginFolderJson), Sprite);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.pluginFolderCss = pluginFolderCss;
 exports.pluginFolderJs = pluginFolderJs;
+exports.pluginFolderJson = pluginFolderJson;
 exports.Sprite = Sprite;
 exports.fonts = fonts;
 exports.images = images;

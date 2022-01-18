@@ -1,10 +1,11 @@
 window.addEventListener('DOMContentLoaded', function () {
     cursorAnimation()
+    lottieAnimation()
 })
 
 const cursorAnimation = () => {
     if (document.documentElement.clientWidth > 1024) {
-        const cursor = document.querySelector('.block-1__arrow');
+        const cursor = document.querySelector('.arrow-page');
         const block = window;
         let links = document.querySelectorAll('a');
 
@@ -26,6 +27,18 @@ const cursorAnimation = () => {
             })
         });
     }
+}
+
+const lottieAnimation = () => {
+    let element = document.getElementById('lottie-animation');
+    lottie.loadAnimation({
+        container: element,
+        renderer: 'canvas',
+        loop: false,
+        autoplay: true,
+        path: 'plugins/json/julia.json',
+    });
+    lottie.setSpeed(0.8);
 }
 
 
