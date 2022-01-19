@@ -131,21 +131,31 @@
             margin: 50px auto 0 auto;
             padding: 0 0 140px 0;
             h1{
-                font-size: 55px;
-                line-height: 60px;
+                font-size: 80px;
+                line-height: 80px;
                 span{
                     display: block;
-                    font-size: 30px;
+                    font-size: 40px;
                 }
             }
             p{
-                font-size: 20px;
                 margin: 20px 0 0 0;
             }
         }
         &__bg{
             svg{
                 opacity: 0.5;
+            }
+        }
+    }
+    @media(max-width: 567px){
+        &__description{
+            h1{
+                font-size: 55px;
+                line-height: 60px;
+                span{
+                    font-size: 30px;
+                }
             }
         }
     }

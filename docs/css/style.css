@@ -806,6 +806,11 @@ h6 {
     margin: 0;
   }
 
+  .block-2 .description p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
   .block-3 {
     margin: 170px auto;
   }
@@ -840,17 +845,16 @@ h6 {
   }
 
   .block-1__description h1 {
-    font-size: 55px;
-    line-height: 60px;
+    font-size: 80px;
+    line-height: 80px;
   }
 
   .block-1__description h1 span {
     display: block;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .block-1__description p {
-    font-size: 20px;
     margin: 20px 0 0 0;
   }
 
@@ -871,6 +875,10 @@ h6 {
     width: 14px;
     height: 14px;
     background-size: 14px 14px;
+  }
+
+  .block-2 .description p br {
+    display: none;
   }
 
   .block-2 .recommend__content h2 {
@@ -901,9 +909,58 @@ h6 {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+
+  .block-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0;
+  }
+
+  .block-4__img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: static;
+  }
+
+  .block-4__content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 30px auto;
+    padding: 0 30px;
+  }
+
+  .block-4__content h3 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .block-4__logo {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 
 @media (max-width: 567px) {
+  .block-1__description h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
+
+  .block-1__description h1 span {
+    font-size: 30px;
+  }
+
   .block-2 .numbers__description h3 {
     max-width: 280px;
     font-size: 48px;
@@ -967,5 +1024,10 @@ h6 {
   .block-2 .numbers__description h3 {
     font-size: 42px;
     line-height: 48px;
+  }
+
+  .block-4__logo {
+    height: 65px;
+    margin: 0;
   }
 }
