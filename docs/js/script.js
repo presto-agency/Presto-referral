@@ -7,7 +7,7 @@ const cursorAnimation = () => {
     if (document.documentElement.clientWidth > 1024) {
         const cursor = document.querySelector('.arrow-page');
         const block = window;
-        let links = document.querySelectorAll('a');
+        let links = document.querySelectorAll('a, button, input');
 
         block.addEventListener('mouseover', function (e) {
             cursor.style.display = 'block';

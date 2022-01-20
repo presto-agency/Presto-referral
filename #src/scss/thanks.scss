@@ -75,6 +75,7 @@
             font-size: 16px;
             line-height: 24px;
             max-width: 200px;
+            color: $text-color;
             a{
                 color: $link-color;
                 padding: 0 0 2px 0;
@@ -90,6 +91,7 @@
     &__also{
         margin: 103px 0 0 0;
         p{
+            color: $text-color;
             font-size: 20px;
             line-height: 30px;
         }
@@ -136,39 +138,6 @@
         }
     }
 
-    &__list {
-        position: fixed;
-        z-index: 5;
-        bottom: 60px;
-        left: 64px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    &__link {
-        font-size: 11px;
-        line-height: 18px;
-        font-weight: 600;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        margin: 0 0 35px 0;
-        &:last-child{
-            margin: 0;
-        }
-        a{
-            writing-mode: vertical-rl;
-            color: $text-color;
-            opacity: 0.5;
-            transition: 300ms;
-        }
-        @media(min-width: 1025px){
-            &:hover{
-                a{
-                    opacity: 1;
-                }
-            }
-        }
-    }
     @media(max-width: 1439px){
         padding: 89px 0 111px 0;
         &:before{
