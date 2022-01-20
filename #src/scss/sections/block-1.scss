@@ -78,7 +78,6 @@
     &__link {
         font-size: 11px;
         line-height: 18px;
-        line-height: 160%;
         font-weight: 600;
         letter-spacing: 0.03em;
         text-transform: uppercase;
@@ -92,9 +91,11 @@
             opacity: 0.5;
             transition: 300ms;
         }
-        &:hover{
-            a{
-                opacity: 1;
+        @media(min-width: 1025px){
+            &:hover{
+                a{
+                    opacity: 1;
+                }
             }
         }
     }
