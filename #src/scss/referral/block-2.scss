@@ -4,6 +4,13 @@
     padding: 0 15px;
     box-sizing: content-box;
     .description {
+    opacity: 0;
+    transform:translate(5em, 5em);
+    transition: 2s;
+    &.active{
+        transform:translate(0, 0);
+        opacity: 1;
+    }
     position: relative;
     padding: 270px 0 163px 0;
             &__top-picture {
@@ -74,6 +81,13 @@
     position: relative;
     padding: 140px 0 200px 0;
     margin: 156px 0 232px 0;
+    opacity: 0;
+    transform:translate(5em, 5em);
+    transition: 2s;
+    &.active{
+        transform:translate(0, 0);
+        opacity: 1;
+    }
             &__bg {
                 position: absolute;
                 top: -41px;
@@ -126,6 +140,13 @@
         max-width: 1440px;
         margin: 232px auto 161px 0;
         padding: 132px 0 166px 0;
+        opacity: 0;
+        transform:translate(5em, 5em);
+        transition: 2s;
+        &.active{
+            transform:translate(0, 0);
+            opacity: 1;
+        }
         &:before{
             content: '';
             position: absolute;

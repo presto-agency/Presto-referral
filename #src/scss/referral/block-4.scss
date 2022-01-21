@@ -3,6 +3,13 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 322px 0 0 0;
+    opacity: 0;
+    transform:translate(5em, 5em);
+    transition: 2s;
+    &.active{
+        transform:translate(0, 0);
+        opacity: 1;
+    }
     &:after{
         content: '';
         position: absolute;

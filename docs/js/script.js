@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
     cursorAnimation()
     lottieAnimation()
+    addClassToScroll()
 })
 
 const cursorAnimation = () => {
@@ -47,6 +48,26 @@ const lottieAnimation = () => {
     });
     lottie.setSpeed(0.8);
 }
+
+(function addClassToScroll() {
+    window.addEventListener("scroll", scrolling, true);
+    function scrolling() {
+        const elementsPage = document.querySelectorAll('.description, .recommend, .numbers, .block-3, .block-4');
+        elementsPage.forEach(el => {
+            if (isFullyVisible(el)) {
+                el.classList.add('active');
+            }
+            else {
+                el.classList.remove('active');
+            }
+        });
+    }
+    function isFullyVisible(el) {
+        let topOfElements = el.getBoundingClientRect().top;
+        let bottomOfElements = el.getBoundingClientRect().bottom;
+        return (((topOfElements <= window.innerHeight) && (bottomOfElements > 0)));
+    }
+}());
 
 
 

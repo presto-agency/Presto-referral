@@ -329,8 +329,22 @@ h6 {
 }
 
 .block-2 .description {
+  opacity: 0;
+  -webkit-transform: translate(5em, 5em);
+      -ms-transform: translate(5em, 5em);
+          transform: translate(5em, 5em);
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
   position: relative;
   padding: 270px 0 163px 0;
+}
+
+.block-2 .description.active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .block-2 .description__top-picture {
@@ -402,6 +416,20 @@ h6 {
   position: relative;
   padding: 140px 0 200px 0;
   margin: 156px 0 232px 0;
+  opacity: 0;
+  -webkit-transform: translate(5em, 5em);
+      -ms-transform: translate(5em, 5em);
+          transform: translate(5em, 5em);
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+
+.block-2 .recommend.active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .block-2 .recommend__bg {
@@ -462,6 +490,20 @@ h6 {
   max-width: 1440px;
   margin: 232px auto 161px 0;
   padding: 132px 0 166px 0;
+  opacity: 0;
+  -webkit-transform: translate(5em, 5em);
+      -ms-transform: translate(5em, 5em);
+          transform: translate(5em, 5em);
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+
+.block-2 .numbers.active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .block-2 .numbers:before {
@@ -504,6 +546,20 @@ h6 {
   position: relative;
   margin: 166px auto 260px auto;
   max-width: 1440px;
+  opacity: 0;
+  -webkit-transform: translate(5em, 5em);
+      -ms-transform: translate(5em, 5em);
+          transform: translate(5em, 5em);
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+
+.block-3.active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .block-3:after {
@@ -600,6 +656,20 @@ h6 {
   max-width: 1440px;
   margin: 0 auto;
   padding: 322px 0 0 0;
+  opacity: 0;
+  -webkit-transform: translate(5em, 5em);
+      -ms-transform: translate(5em, 5em);
+          transform: translate(5em, 5em);
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+
+.block-4.active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .block-4:after {
