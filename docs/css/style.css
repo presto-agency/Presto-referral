@@ -162,43 +162,7 @@ h6 {
 }
 
 .arrow-page {
-  z-index: 10;
-  pointer-events: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.arrow-page__arrow {
-  position: relative;
-  width: 80px;
-  background-image: url(../img/home/arrow-a.svg);
-  background-size: 20px 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: width 0.2s, -webkit-transform ease-in 30ms;
-  transition: width 0.2s, -webkit-transform ease-in 30ms;
-  -o-transition: transform ease-in 30ms, width 0.2s;
-  transition: transform ease-in 30ms, width 0.2s;
-  transition: transform ease-in 30ms, width 0.2s, -webkit-transform ease-in 30ms;
-}
-
-.arrow-page__arrow.active {
-  width: 120px;
-  background: none;
+  display: none;
 }
 
 .header {
@@ -969,19 +933,57 @@ h6 {
   background-color: transparent;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  .list__link:hover a {
+    opacity: 1;
+  }
+
+  .arrow-page {
+    z-index: 10;
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .arrow-page__arrow {
+    position: relative;
+    width: 80px;
+    background-image: url(../img/home/arrow-a.svg);
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.2s, -webkit-transform ease-in 30ms;
+    transition: width 0.2s, -webkit-transform ease-in 30ms;
+    -o-transition: transform ease-in 30ms, width 0.2s;
+    transition: transform ease-in 30ms, width 0.2s;
+    transition: transform ease-in 30ms, width 0.2s, -webkit-transform ease-in 30ms;
+  }
+
+  .arrow-page__arrow.active {
+    width: 120px;
+    background: none;
+  }
+
   body {
     cursor: none;
   }
 
   body a {
     cursor: pointer;
-  }
-}
-
-@media (min-width: 1025px) {
-  .list__link:hover a {
-    opacity: 1;
   }
 
   .header__img:hover svg {
