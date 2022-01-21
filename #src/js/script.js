@@ -4,28 +4,35 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 const cursorAnimation = () => {
-    if (document.documentElement.clientWidth > 1024) {
-        const cursor = document.querySelector('.arrow-page');
-        const block = window;
-        let links = document.querySelectorAll('a, button, input');
+    if (window.screen.width > 1024) {
+        const mouse_track = document.querySelector('.arrow-page__arrow');
+        const cursor_wrapper_rects = document.querySelector('.arrow-page').getClientRects();
+        const links = document.querySelectorAll('a, button, input');
+        const window_centerpt = {
+            x: cursor_wrapper_rects[0].width / 2,
+            y: cursor_wrapper_rects[0].height / 2,
+        };
+        let mouse_x;
+        let mouse_y;
 
-        block.addEventListener('mouseover', function (e) {
-            cursor.style.display = 'block';
-            block.addEventListener('mousemove', cMove, false);
-            function cMove(e) {
-                cursor.style.left = e.pageX + 'px';
-                cursor.style.top = e.pageY + 'px';
-            }
-        }, false);
-
+        document.addEventListener("mousemove", (e) => {
+            mouse_x = e.clientX;
+            mouse_y = e.clientY;
+            mouse_track.style = `
+            transform: translate3d(
+            ${mouse_x - 5 - window_centerpt.x}px, 
+            ${mouse_y - 5 - window_centerpt.y}px, 
+            0px);`;
+        });
         links.forEach(link => {
             link.addEventListener('mouseenter', function () {
-                cursor.classList.add('active');
+                mouse_track.classList.add('active');
             })
             link.addEventListener('mouseleave', function () {
-                cursor.classList.remove('active');
+                mouse_track.classList.remove('active');
             })
         });
+
     }
 }
 

@@ -163,7 +163,43 @@ h6 {
 }
 
 .arrow-page {
-  display: none;
+  z-index: 10;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arrow-page__arrow {
+  position: relative;
+  width: 80px;
+  background-image: url(../img/home/arrow-a.svg);
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.2s, -webkit-transform ease-in 30ms;
+  transition: width 0.2s, -webkit-transform ease-in 30ms;
+  -o-transition: transform ease-in 30ms, width 0.2s;
+  transition: transform ease-in 30ms, width 0.2s;
+  transition: transform ease-in 30ms, width 0.2s, -webkit-transform ease-in 30ms;
+}
+
+.arrow-page__arrow.active {
+  width: 120px;
+  background: none;
 }
 
 .header {
@@ -941,34 +977,6 @@ h6 {
 
   body a {
     cursor: pointer;
-  }
-
-  .arrow-page {
-    position: absolute;
-    z-index: 5;
-    pointer-events: none;
-    cursor: none;
-    width: 80px;
-    height: 80px;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transition: -webkit-transform 300ms;
-    transition: -webkit-transform 300ms;
-    -o-transition: transform 300ms;
-    transition: transform 300ms;
-    transition: transform 300ms, -webkit-transform 300ms;
-    background-image: url(../img/home/arrow-a.svg);
-    background-size: 20px 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .arrow-page.active {
-    -webkit-transform: translate(-50%, -50%) scale(1.3);
-        -ms-transform: translate(-50%, -50%) scale(1.3);
-            transform: translate(-50%, -50%) scale(1.3);
-    background: none;
   }
 }
 
