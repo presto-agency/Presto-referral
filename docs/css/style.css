@@ -125,10 +125,9 @@ h6 {
 
 .list {
   position: fixed;
-  z-index: 3;
+  z-index: 10;
   bottom: 75px;
   left: 28px;
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,6 +1304,10 @@ h6 {
 }
 
 @media (max-width: 767px) {
+  .list {
+    display: none;
+  }
+
   .block-1__list {
     display: none;
   }

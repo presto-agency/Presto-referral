@@ -32,7 +32,6 @@ const cursorAnimation = () => {
                 mouse_track.classList.remove('active');
             })
         });
-
     }
 }
 

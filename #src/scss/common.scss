@@ -19,10 +19,9 @@
 
 .list {
 	position: fixed;
-	z-index: 3;
+	z-index: 10;
 	bottom: 75px;
 	left: 28px;
-	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	&__link {
@@ -48,6 +47,9 @@
 				}
 			}
 		}
+	}
+	@media(max-width: 767px){
+		display: none;
 	}
 }
 
