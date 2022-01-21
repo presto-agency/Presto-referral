@@ -22,7 +22,8 @@ const cursorAnimation = () => {
             transform: translate3d(
             ${mouse_x - 5 - window_centerpt.x}px, 
             ${mouse_y - 5 - window_centerpt.y}px, 
-            0px);`;
+            0px);
+            display: flex;`;
         });
         links.forEach(link => {
             link.addEventListener('mouseenter', function () {

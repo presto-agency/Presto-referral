@@ -71,6 +71,7 @@
 		align-items: center;
 		&__arrow {
 			position: relative;
+			display: none;
 			width: 80px;
 			background-image: url(../img/home/arrow-a.svg);
 			background-size: 20px 20px;
