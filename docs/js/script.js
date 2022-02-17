@@ -57,9 +57,9 @@ const lottieAnimation = () => {
             if (isFullyVisible(el)) {
                 el.classList.add('active');
             }
-            else {
-                el.classList.remove('active');
-            }
+            // else {
+            //     el.classList.remove('active');
+            // }
         });
     }
     function isFullyVisible(el) {

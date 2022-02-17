@@ -1424,6 +1424,14 @@ h6 {
     display: none;
   }
 
+  .footer {
+    position: static;
+    -webkit-transform: initial;
+        -ms-transform: initial;
+            transform: initial;
+    padding: 100px 0 20px 0;
+  }
+
   .footer__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1599,6 +1607,10 @@ h6 {
 }
 
 @media (max-width: 567px) {
+  .footer {
+    padding: 50px 0 20px 0;
+  }
+
   .block-1__description h1 {
     font-size: 55px;
     line-height: 60px;
