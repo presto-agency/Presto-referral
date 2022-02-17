@@ -1,11 +1,8 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
     max-width: 750px;
     width: 100%;
-    padding: 0 0 0 210px;
+    padding: 100px 0 0 210px;
     box-sizing: content-box;
     min-height: 100px;
     display: flex;
@@ -28,16 +25,15 @@
             white-space: nowrap;
         }
     }
+    @media(max-width: 1439px){
+        padding: 100px 0 20px 0;
+    }
     @media(max-width: 1023px){
-        padding: 0;
         &__content{
             padding: 0 20px;
         }
     }
     @media(max-width: 767px){
-        position: static;
-        transform: initial;
-        padding: 100px 0 20px 0;
         &__content{
             flex-wrap: wrap;
         }

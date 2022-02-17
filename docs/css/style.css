@@ -193,15 +193,10 @@ h6 {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  margin: 0 auto;
   max-width: 750px;
   width: 100%;
-  padding: 0 0 0 210px;
+  padding: 100px 0 0 210px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   min-height: 100px;
@@ -1131,6 +1126,10 @@ h6 {
 }
 
 @media (max-width: 1439px) {
+  .footer {
+    padding: 100px 0 20px 0;
+  }
+
   .block-1__bg {
     right: -717px;
   }
@@ -1285,10 +1284,6 @@ h6 {
     padding: 39px 0 0 0;
   }
 
-  .footer {
-    padding: 0;
-  }
-
   .footer__content {
     padding: 0 20px;
   }
@@ -1422,14 +1417,6 @@ h6 {
 @media (max-width: 767px) {
   .list {
     display: none;
-  }
-
-  .footer {
-    position: static;
-    -webkit-transform: initial;
-        -ms-transform: initial;
-            transform: initial;
-    padding: 100px 0 20px 0;
   }
 
   .footer__content {
