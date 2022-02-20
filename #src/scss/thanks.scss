@@ -67,20 +67,26 @@
             line-height: 92px;
             color: $text-color;
         }
+        #thanks__qr{
+            img{
+                width: 141px;
+                height: 141px;
+            }
+        }
     }
     
     &__here{
-        margin: 36px 0 0 0;
+        margin: 36px 0;
         p{
             font-size: 16px;
             line-height: 24px;
-            max-width: 200px;
             color: $text-color;
             a{
                 color: $link-color;
                 padding: 0 0 2px 0;
                 border-bottom: 1px solid $link-color;
                 transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                word-wrap: break-word;
                 &:hover{
                     opacity: 0.7;
                 }
