@@ -49,7 +49,7 @@ const lottieAnimation = () => {
     lottie.setSpeed(0.8);
 }
 
-(function addClassToScroll() {
+const addClassToScroll = () => {
     window.addEventListener("scroll", scrolling, true);
     function scrolling() {
         const elementsPage = document.querySelectorAll('.description, .recommend, .numbers, .block-3, .block-4');
@@ -67,7 +67,7 @@ const lottieAnimation = () => {
         let bottomOfElements = el.getBoundingClientRect().bottom;
         return (((topOfElements <= window.innerHeight) && (bottomOfElements > 0)));
     }
-}());
+};
 
 
 

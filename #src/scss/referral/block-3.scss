@@ -1,3 +1,8 @@
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
 .block-3 {
     position: relative;
     margin: 166px auto 260px auto;
@@ -8,6 +13,38 @@
     &.active{
         transform:translate(0, 0);
         opacity: 1;
+        .card{
+            &__middle {
+                p{
+                    --num: 10;
+                    transition: --num 1s;
+                    counter-set: num var(--num);
+                    &:before{
+                        content: counter(num);
+                    }
+                }
+            }
+            &:nth-child(2){
+                .card{
+                    &__middle{
+                        p{
+                            --num: 7;
+                            transition-delay: 1s;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3){
+                .card{
+                    &__middle{
+                        p{
+                            --num: 5;
+                            transition-delay: 2s;
+                        }
+                    }
+                }
+            }
+        }
     }
     &:after{
         content: '';
@@ -28,7 +65,15 @@
     }
 
     .card {
-    
+        &:nth-child(2), &:nth-child(3){
+            .card{
+                &__middle{
+                    p{
+                        width: 137px;
+                    }
+                }
+            }
+        }
         &__top {
             h4{
                 font-size: 16px;
@@ -37,6 +82,7 @@
                 margin: 0 0 14px 0;
             }
             p{
+                white-space: nowrap;
                 font-size: 18px;
                 line-height: 16px;
                 color: $text-color;
@@ -50,12 +96,22 @@
         &__middle {
             margin: 0 0 10px 0;
             p{
+                position: relative;
                 font-size: 136px;
                 color: $text-color;
+                width: 190px;
+                height: 136px;
                 span{
+                    position: absolute;
+                    bottom: 8px;
+                    right: 0;
                     font-size: 50px;
                     color: $link-color;
-                    margin: 0 0 0 11px;
+                }
+                &:before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
             }
         }
@@ -108,8 +164,19 @@
     @media(max-width: 767px){
         .card{
             margin: 0 20px;
+            &:nth-child(2), &:nth-child(3){
+                .card{
+                    &__middle{
+                        p{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
             &__middle{
                 p{
+                    width: 150px;
+                    height: 95px;
                     font-size: 95px;
                 }
             }

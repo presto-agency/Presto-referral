@@ -537,6 +537,12 @@ h6 {
      object-fit: cover;
 }
 
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
 .block-3 {
   position: relative;
   margin: 166px auto 260px auto;
@@ -555,6 +561,30 @@ h6 {
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
+}
+
+.block-3.active .card__middle p {
+  --num: 10;
+  transition: --num 1s;
+  counter-set: num var(--num);
+}
+
+.block-3.active .card__middle p:before {
+  content: counter(num);
+}
+
+.block-3.active .card:nth-child(2) .card__middle p {
+  --num: 7;
+  -webkit-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.block-3.active .card:nth-child(3) .card__middle p {
+  --num: 5;
+  -webkit-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
 }
 
 .block-3:after {
@@ -581,6 +611,11 @@ h6 {
           justify-content: space-between;
 }
 
+.block-3 .card:nth-child(2) .card__middle p,
+.block-3 .card:nth-child(3) .card__middle p {
+  width: 137px;
+}
+
 .block-3 .card__top h4 {
   font-size: 16px;
   line-height: 23px;
@@ -589,6 +624,7 @@ h6 {
 }
 
 .block-3 .card__top p {
+  white-space: nowrap;
   font-size: 18px;
   line-height: 16px;
   color: #1C314E;
@@ -604,14 +640,25 @@ h6 {
 }
 
 .block-3 .card__middle p {
+  position: relative;
   font-size: 136px;
   color: #1C314E;
+  width: 190px;
+  height: 136px;
 }
 
 .block-3 .card__middle p span {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
   font-size: 50px;
   color: #F4A17C;
-  margin: 0 0 0 11px;
+}
+
+.block-3 .card__middle p:before {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .block-3 .card__bottom p {
@@ -1494,7 +1541,14 @@ h6 {
     margin: 0 20px;
   }
 
+  .block-3 .card:nth-child(2) .card__middle p,
+  .block-3 .card:nth-child(3) .card__middle p {
+    width: 100px;
+  }
+
   .block-3 .card__middle p {
+    width: 150px;
+    height: 95px;
     font-size: 95px;
   }
 
