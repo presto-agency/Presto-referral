@@ -56,10 +56,11 @@ const addClassToScroll = () => {
         elementsPage.forEach(el => {
             if (isFullyVisible(el)) {
                 el.classList.add('active');
+                if (el.classList.contains('block-3') && el.classList.contains('active') && !el.hasAttribute('data-run')) {
+                    countingAnim()
+                    el.setAttribute('data-run', '')
+                }
             }
-            // else {
-            //     el.classList.remove('active');
-            // }
         });
     }
     function isFullyVisible(el) {
@@ -68,6 +69,39 @@ const addClassToScroll = () => {
         return (((topOfElements <= window.innerHeight) && (bottomOfElements > 0)));
     }
 };
+
+const countingAnim = () => {
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = Math.floor(progress * (end - start) + start) + '<span>%</span>';
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+    const numbers_1 = () => {
+        const obj = document.getElementById("1");
+        animateValue(obj, 0, 10, 1000);
+    }
+    numbers_1()
+
+    const numbers_2 = () => {
+        const obj = document.getElementById("2");
+        setTimeout(animateValue, 700, obj, 0, 7, 700);
+    }
+    numbers_2()
+
+    const numbers_3 = () => {
+        const obj = document.getElementById("3");
+        setTimeout(animateValue, 1500, obj, 0, 5, 500);
+    }
+    numbers_3()
+
+}
 
 
 
