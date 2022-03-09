@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
     cursorAnimation()
     lottieAnimation()
     addClassToScroll()
+    block_2()
 })
 
 const cursorAnimation = () => {
@@ -35,7 +36,7 @@ const cursorAnimation = () => {
             })
         });
     }
-}
+};
 
 const lottieAnimation = () => {
     let element = document.getElementById('lottie-animation');
@@ -47,7 +48,7 @@ const lottieAnimation = () => {
         path: 'plugins/json/julia.json',
     });
     lottie.setSpeed(0.8);
-}
+};
 
 const addClassToScroll = () => {
     window.addEventListener("scroll", scrolling, true);
@@ -101,6 +102,13 @@ const countingAnim = () => {
     }
     numbers_3()
 
+};
+
+const block_2 = () => {
+    let description = document.querySelector('.description');
+    if (window.innerHeight >= description.getBoundingClientRect().top) {
+        description.classList.add('active')
+    }
 }
 
 
