@@ -21,7 +21,7 @@
 	position: fixed;
 	z-index: 10;
 	bottom: 75px;
-	left: 28px;
+	left: 18px;
 	display: flex;
 	flex-direction: column;
 	&__link {
@@ -30,7 +30,7 @@
 		font-weight: 600;
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
-		margin: 0 0 35px 0;
+		margin: 0 0 30px 0;
 		&:last-child{
 			margin: 0;
 		}
@@ -39,6 +39,7 @@
 			color: $text-color;
 			opacity: 0.5;
 			transition: 300ms;
+			padding: 5px 10px;
 		}
 		@media(min-width: 1025px){
 			&:hover{
