@@ -977,8 +977,8 @@ h6 {
   color: #1c314e;
 }
 
-.send-form__inputs input:first-child {
-  margin: 0 0 30px 0;
+.send-form__inputs input + input {
+  margin: 30px 0 0 0;
 }
 
 .send-form__inputs ::-webkit-input-placeholder {
