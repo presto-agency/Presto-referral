@@ -843,8 +843,8 @@ h6 {
 }
 
 .thanks__here p {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 30px;
   color: #1C314E;
 }
 
@@ -971,10 +971,14 @@ h6 {
 .send-form__inputs input {
   height: 60px;
   padding: 0 0 20px 0;
-  border-bottom: 1px solid #1c314e;
+  border-bottom: 2px solid #d8dadb;
   background: transparent;
   font-size: 30px;
   color: #1c314e;
+}
+
+.send-form__inputs input:focus {
+  border-bottom: 2px solid #1c314e;
 }
 
 .send-form__inputs input + input {
@@ -982,11 +986,11 @@ h6 {
 }
 
 .send-form__inputs ::-webkit-input-placeholder {
-  color: rgba(28, 49, 78, 0.5);
+  color: #d8dadb;
 }
 
 .send-form__inputs ::-moz-placeholder {
-  color: rgba(28, 49, 78, 0.5);
+  color: #d8dadb;
 }
 
 .send-form__img {
@@ -1743,8 +1747,10 @@ h6 {
     left: 19px;
   }
 
-  .thanks__also p {
+  .thanks__also p,
+  .thanks__here p {
     font-size: 18px;
+    line-height: 24px;
   }
 
   .send-form__title p {

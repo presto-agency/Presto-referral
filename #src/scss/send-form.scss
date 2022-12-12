@@ -45,10 +45,14 @@
     input {
       height: 60px;
       padding: 0 0 20px 0;
-      border-bottom: 1px solid #1c314e;
+      border-bottom: 2px solid #d8dadb;
       background: transparent;
       font-size: 30px;
       color: #1c314e;
+
+      &:focus {
+        border-bottom: 2px solid #1c314e;
+      }
     }
 
     input + input {
@@ -56,11 +60,11 @@
     }
 
     ::-webkit-input-placeholder {
-      color: rgba($color: #1c314e, $alpha: 0.5);
+      color: #d8dadb;
     }
 
     ::-moz-placeholder {
-      color: rgba($color: #1c314e, $alpha: 0.5);
+      color: #d8dadb;
     }
   }
 
