@@ -45,4 +45,4 @@ yarn start
 
 deploy to gh-pages automatically after push to branch
 
-deploy: [gh-pages](https://presto-agency.github.io/presto-referral/)
+deploy: [gh-pages](https://presto-agency.github.io/Presto-referral/)
